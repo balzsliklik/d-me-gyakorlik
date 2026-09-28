@@ -1,0 +1,153 @@
+﻿<Window x:Class="döme_gyakorlik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:döme_gyakorlik"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1000" Width="600"
+        Background="White">
+    <Grid Margin="20">
+       
+            
+
+            <Border CornerRadius="15"
+                    
+                    Background="DimGray">
+                
+                <StackPanel Margin="10">
+                    <TextBlock Text="SZIGMOZI" 
+                               FontWeight="bold"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               Margin="0,0,0,10"
+                               Foreground="white"/>
+                    <TextBlock Text="Jegyfoglalás" 
+                                   FontSize="40"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,10,0,25"
+                                   Foreground="White"
+                                   FontWeight="Bold"/>
+                <TextBlock Text="válaszd ki a filmet" 
+                            FontWeight="Medium"
+                            FontSize="20"
+                            HorizontalAlignment="Left"
+                            Margin="0,0,0,10"
+                            Foreground="white"/>
+                <ComboBox x:Name="filmek" 
+                             
+                              Height="30"
+                              HorizontalAlignment="Stretch"
+                              Margin="0,10,0,10">
+                        <ComboBoxItem Content="Lego Batman"/>
+                        <ComboBoxItem Content="Lego Movie"/>
+                        <ComboBoxItem Content="Avatar (nem a kék genyos)"/>
+                        <ComboBoxItem Content="Mi vagyunk Döme(döme életrajz)"/>
+                 </ComboBox>
+                <TextBlock Text="válaszd ki a jegytípust" 
+                            FontWeight="Medium"
+                            FontSize="20"
+                            HorizontalAlignment="Left"
+                            Margin="0,0,0,10"
+                            Foreground="white"/>
+                <RadioButton x:Name="jegySima"
+                             FontSize="18"
+                              Content="Normál Jegy (2500Ft)"
+                              IsChecked="true"
+                              Foreground="white"
+                              Margin="0, 5, 0, 5"
+                              GroupName="jegy"/>
+                <RadioButton x:Name="jegyDiak"
+                             FontSize="18"
+                              Content="Diák Jegy (1900Ft)"
+                              IsChecked="False"
+                              Foreground="white"
+                              Margin="0, 5, 0, 5"
+                              GroupName="jegy"/>
+                <RadioButton x:Name="jegyVip"
+                             FontSize="18"
+                              Content="VIP jegy (4000Ft)"
+                              IsChecked="False"
+                              Foreground="white"
+                              Margin="0, 5, 0, 5"
+                              GroupName="jegy"/>
+
+                <TextBlock Text="Jegyek száma" 
+                            FontWeight="Medium"
+                            FontSize="20"
+                            HorizontalAlignment="Left"
+                            Margin="0,15,0,10"
+                            Foreground="white"/>
+                    
+                <TextBox x:Name="jegySzam"
+                          Height="30"
+                          HorizontalAlignment="Stretch"
+                          Margin="0,10,0,10"/>
+
+                <TextBlock Text="extra szolgáltatások" 
+                        FontWeight="Medium"
+                        FontSize="20"
+                        HorizontalAlignment="Left"
+                        Margin="0,10,0,10"
+                        Foreground="white"/>
+                <CheckBox x:Name="extraPopcorn"
+                          FontSize="18"
+                          Content="Popcorn (1200Ft)"
+                          IsChecked="False"
+                          Foreground="white"
+                          Margin="0, 5, 0, 5"/>
+                <CheckBox x:Name="extraUdito"
+                          FontSize="18"
+                          Content="Üdítő (800Ft)"
+                          IsChecked="False"
+                          Foreground="white"
+                          Margin="0, 5, 0, 5"/>
+                <CheckBox x:Name="extra3d"
+                          FontSize="18"
+                          Content="3D szemüveg (500Ft)"
+                          IsChecked="False"
+                          Foreground="white"
+                          Margin="0, 5, 0, 5"/>
+
+                <TextBlock Text="Név:" 
+                            FontWeight="Medium"
+                            FontSize="20"
+                            HorizontalAlignment="Left"
+                            Margin="0,15,0,10"
+                            Foreground="white"/>
+
+                <TextBox x:Name="Nev"
+                          HorizontalAlignment="Stretch"
+                          Height="30"
+                          
+                          Margin="0,10,0,10"/>
+
+                <TextBlock Text="Életkor" 
+                            FontWeight="Medium"
+                            FontSize="20"
+                            HorizontalAlignment="Left"
+                            Margin="0,15,0,10"
+                            Foreground="white"/>
+
+                <TextBox x:Name="Kor"
+                          
+                          Height="30"
+                          HorizontalAlignment="Stretch"
+                          Margin="0,10,0,10"/>
+                    
+                 <Button x:Name="foglalas"
+                         Content="Foglalás"
+                         Width="400"
+                         Height="40"
+                         HorizontalAlignment="Center"
+                         Margin="0,20,0,10"
+                         Background="LightBlue"
+                         Foreground="White"
+                         FontSize="20" Click="foglalas_Click"
+                         />
+
+            </StackPanel>
+            </Border>
+        
+    </Grid>
+</Window>
